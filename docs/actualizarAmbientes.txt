@@ -1,0 +1,24 @@
+Para actualizar un ambiente se tiene que realizar la actualizacion de este, luego hacer un merge. por ejemplo, si
+estamos desarrollando en nuestra rama 'samuel' y queremos subir un cambio a la rama en comun para todos los
+desarrolladores primero debemos actualizar nuestra rama:
+
+    git add .
+    git commit -m "Comentario de los cambios"
+    git push origin samuel
+
+Luego cambiamos a la rama que queremos actualizar y descargamos cualquier nueva actualizacion
+
+    git checkout desarrollo
+    git pull origin desarrollo
+
+Ahora agregamos los cambios a la rama de 'desarrollo' desde la rama 'samuel'
+
+    git merge samuel
+
+Esto generara el tipico 'Merge samuel into desarrollo' y luego debemos subir esta actualizacion 
+
+    git push origin desarrollo
+
+Listo! Ahora volvemos a nuestra rama.
+
+    git checkout samuel
