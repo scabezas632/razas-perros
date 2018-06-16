@@ -1,3 +1,31 @@
-<p>
-  raza works!
-</p>
+<h1>{{ raza.nombre | uppercase }} - {{ raza.pais }}</h1>
+<hr>
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-4">
+
+      <img [src]="raza.img" [alt]="raza.nombre" class="img-fluid">
+      <br><br>
+      <a [routerLink]="['/razas']" class="btn btn-outline-danger btn-block">Regresar</a>
+
+      <div class="col-md-8">
+
+        <h3>{{ raza.nombre }}</h3>
+        <hr>
+        <p>
+          {{ raza.info }}
+        </p>
+        <p>
+          Tamaño: {{ raza.tamanio }}
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+  
+</div>

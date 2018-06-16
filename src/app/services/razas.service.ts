@@ -28,4 +28,9 @@ export class RazasService {
   getRazas() {
     return this.razas;
   }
+
+  getRaza(id: number) {
+    return this.razas[id];
+  }
+
 }
