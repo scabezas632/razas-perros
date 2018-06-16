@@ -1,5 +1,19 @@
-<p>
-  razas works!
-</p>
 
-<input type="button" value="Abrir Componente About" [routerLink]="['./about']" class="btn">
+<h1>Razas de Perros</h1>
+
+<div class="card-columns">
+  <div class="card animated fadeIn fast">
+    <img class="card-img-top rounded mx-auto d-block" src="assets/img/terrier-chileno.jpg" alt="terrier chileno">
+    <div class="card-body">
+      <h5 class="card-title">Terrier Chileno</h5>
+      <p class="card-text">Es un perrito lindo y es chileno.</p>
+
+      <button type="button" 
+              class="btn btn-outline-primary btn-block"
+              [routerLink]="['./raza']">
+        Ver Info
+      </button>
+
+    </div>
+  </div>
+</div>
