@@ -33,4 +33,19 @@ export class RazasService {
     return this.razas[id];
   }
 
+  buscarTermino( termino: string ) {
+    const razaArray: Raza[] = [];
+    termino = termino.toLowerCase();
+
+    for (const raza of this.razas) {
+      const nombre = raza.nombre.toLocaleLowerCase();
+      const pais = raza.pais.toLocaleLowerCase();
+      const tamanio = raza.tamanio.toLocaleLowerCase();
+      if ( nombre.includes( termino ) || pais.includes( termino ) || tamanio.includes( termino ) ) {
+        razaArray.push( raza );
+      }
+    }
+    return razaArray;
+  }
+
 }

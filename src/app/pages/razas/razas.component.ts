@@ -11,14 +11,23 @@ import { Router } from '@angular/router';
 export class RazasComponent implements OnInit {
 
   razas: Raza[] = [];
+  razasBusqueda: Raza[] = [];
 
   constructor( private _razasService: RazasService,
                private router: Router ) { }
 
   ngOnInit() {
     this.razas = this._razasService.getRazas();
+    this.razasBusqueda = this.razas;
+  }
 
-    console.log(this.razas);
+  buscar( termino: string ) {
+    if (termino !== '') {
+      this.razasBusqueda = this._razasService.buscarTermino( termino );
+    } else {
+      this.razasBusqueda = this.razas;
+    }
+    console.log(this.razasBusqueda);
   }
 
   verRaza(id: number) {

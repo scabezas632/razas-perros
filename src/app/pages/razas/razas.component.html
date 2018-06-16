@@ -1,19 +1,33 @@
 
-<h1>Razas de Perros</h1>
+<div class="row">
+  <div class="col-md-12">
+    
+    <h1>Razas de Perros</h1>
+    <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Filtrar por término">
+
+  </div>
+</div>
+
+<div class="row" *ngIf="razasBusqueda.length==0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+      No existen resultados con el termino: {{ termino.value }}
+    </div>
+  </div>
+</div>
 
 <div class="card-columns">
-  <div class="card animated fadeIn fast" *ngFor="let raza of razas; let i = index">
+  <div class="card animated fadeIn fast" *ngFor="let raza of razasBusqueda; let i = index">
     <img class="card-img-top rounded mx-auto d-block" [src]="raza.img" [alt]="raza.nombre">
     <div class="card-body">
-      <h5 class="card-title">{{ raza.nombre }}</h5>
-      <p class="card-text">{{ raza.info }}</p>
-
-      <button type="button" 
-              class="btn btn-outline-primary btn-block"
-              (click)="verRaza(i)">
-        Ver Info
-      </button>
-
+        <h5 class="card-title">{{ raza.nombre }}</h5>
+        <p class="card-text">{{ raza.info }}</p>
+  
+        <button type="button" 
+                class="btn btn-outline-primary btn-block"
+                (click)="verRaza(i)">
+          Ver Info
+        </button>
     </div>
   </div>
 </div>

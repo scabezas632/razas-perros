@@ -1,29 +1,27 @@
-<h1>{{ raza.nombre | uppercase }} - {{ raza.pais }}</h1>
 <hr>
 
 <div class="container">
 
   <div class="row">
-
     <div class="col-md-4">
 
-      <img [src]="raza.img" [alt]="raza.nombre" class="img-fluid">
+      <img [src]="raza.img" [alt]="raza.nombre" class="img-fluid mx-auto d-block">
       <br><br>
       <a [routerLink]="['/razas']" class="btn btn-outline-danger btn-block">Regresar</a>
-
-      <div class="col-md-8">
-
-        <h3>{{ raza.nombre }}</h3>
-        <hr>
-        <p>
-          {{ raza.info }}
-        </p>
-        <p>
-          Tamaño: {{ raza.tamanio }}
-        </p>
-
-      </div>
-
+      
+    </div >
+    <div class="col-md-8">
+      <h3>{{ raza.nombre }}</h3>
+      <hr>
+      <p>
+        <strong>Caracteristicas:</strong> {{ raza.info }}
+      </p>
+      <p>
+        <strong>Tamaño:</strong> {{ raza.tamanio }}
+      </p>
+      <p>
+       <strong>País:</strong> {{ raza.pais }}
+      </p>
     </div>
 
   </div>
