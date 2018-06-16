@@ -2,15 +2,15 @@
 <h1>Razas de Perros</h1>
 
 <div class="card-columns">
-  <div class="card animated fadeIn fast">
-    <img class="card-img-top rounded mx-auto d-block" src="assets/img/terrier-chileno.jpg" alt="terrier chileno">
+  <div class="card animated fadeIn fast" *ngFor="let raza of razas; let i = index">
+    <img class="card-img-top rounded mx-auto d-block" [src]="raza.img" [alt]="raza.nombre">
     <div class="card-body">
-      <h5 class="card-title">Terrier Chileno</h5>
-      <p class="card-text">Es un perrito lindo y es chileno.</p>
+      <h5 class="card-title">{{ raza.nombre }}</h5>
+      <p class="card-text">{{ raza.info }}</p>
 
       <button type="button" 
               class="btn btn-outline-primary btn-block"
-              [routerLink]="['./raza']">
+              (click)="verRaza(i)">
         Ver Info
       </button>
 
