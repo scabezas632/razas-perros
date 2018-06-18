@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -20,10 +21,11 @@ import { RazasService } from './services/razas.service';
     HomeComponent,
     ContactComponent,
     NavbarComponent,
-    NoPageFoundComponent,
+    NoPageFoundComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [

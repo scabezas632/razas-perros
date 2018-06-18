@@ -5,10 +5,10 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-razas',
-  templateUrl: './razas.component.html',
-  styleUrls: ['./razas.component.css']
+  templateUrl: './busqueda.component.html',
+  styleUrls: ['./busqueda.component.css']
 })
-export class RazasComponent implements OnInit {
+export class BusquedaComponent implements OnInit {
 
   razas: Raza[] = [];
   razasBusqueda: Raza[] = [];
@@ -28,11 +28,6 @@ export class RazasComponent implements OnInit {
       this.razasBusqueda = this.razas;
     }
     console.log(this.razasBusqueda);
-  }
-
-  verRaza(id: number) {
-    const PATH = '/razas/raza/' + id;
-    this.router.navigateByUrl( PATH );
   }
 
 }

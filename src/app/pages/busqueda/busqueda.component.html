@@ -16,18 +16,18 @@
   </div>
 </div>
 
-<div class="card-columns">
+<div class="card-columns main-container">
   <div class="card animated fadeIn fast" *ngFor="let raza of razasBusqueda; let i = index">
     <img class="card-img-top rounded mx-auto d-block" [src]="raza.img" [alt]="raza.nombre">
     <div class="card-body">
         <h5 class="card-title">{{ raza.nombre }}</h5>
         <p class="card-text">{{ raza.info }}</p>
-  
-        <button type="button" 
-                class="btn btn-outline-primary btn-block"
-                (click)="verRaza(i)">
+
+        <a [routerLink]="['/busqueda',0]" 
+            class="btn btn-outline-danger btn-block">
           Ver Info
-        </button>
+        </a>
+        
     </div>
   </div>
 </div>

@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Raza } from '../interfaces/raza.interface';
+import { map } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RazasService {
+
+  razasURL: any = 'https://razas-perros.firebaseio.com/razas.json';
+  razaURL: any = 'https://razas-perros.firebaseio.com/razas/';
 
   private razas: Raza[] = [
     {
@@ -23,7 +28,7 @@ export class RazasService {
     }
   ];
 
-  constructor() { }
+  constructor( private http: HttpClient ) { }
 
   getRazas() {
     return this.razas;
@@ -47,5 +52,62 @@ export class RazasService {
     }
     return razaArray;
   }
+
+  nuevaRaza( raza: Raza ) {
+    const body = JSON.stringify( raza );
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    const options = {
+      headers: headers
+    };
+
+    return this.http.post( this.razasURL, body, options )
+              .pipe(map ( res => {
+                return res;
+              }));
+  }
+
+  actualizarRaza( raza: Raza, id: string ) {
+    const body = JSON.stringify( raza );
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    const options = {
+      headers: headers
+    };
+
+    const url = `${ this.razaURL }/${ id }.json`;
+
+    return this.http.put( url , body, options )
+              .pipe(map ( res => {
+                return res;
+              }));
+  }
+
+  obtenerRaza( id: string ) {
+    const url = `${ this.razaURL }/${ id }.json`;
+
+    return this.http.get( url )
+      .pipe(map(res => res));
+
+  }
+
+  obtenerRazas( ) {
+    const url = `${ this.razasURL }`;
+
+    return this.http.get( url )
+      .pipe(map(res => res));
+
+  }
+
+  eliminarRaza( id: string ) {
+    const url = `${ this.razaURL }/${ id }.json`;
+
+    return this.http.delete( url )
+      .pipe(map(res => res));
+  }
+
+
 
 }

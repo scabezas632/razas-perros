@@ -3,14 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 // SE IMPORTAN LOS COMPONENTES QUE DEPENDEN DE ESTE MODULO
-import { RazasComponent } from './razas/razas.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
 import { RazaComponent } from './raza/raza.component';
-
 
 const PAGES_ROUTES: Routes = [
   // RUTAS DE LOS COMPONENTES
-  { path: '', component: RazasComponent },
-  { path: 'raza/:id', component: RazaComponent },
+  { path: '', component: BusquedaComponent },
+  { path: ':id', component: RazaComponent },
 ];
 
 
@@ -22,8 +21,8 @@ const PAGES_ROUTES: Routes = [
   ],
   declarations: [
     // SE DECLARAN LOS COMPONENTES QUE SE INICIARÁN JUNTO CON EL MODULO
-    RazasComponent,
-    RazaComponent,
+    BusquedaComponent,
+    RazaComponent
   ]
 })
-export class PaginasModule { }
+export class RazasModule { }

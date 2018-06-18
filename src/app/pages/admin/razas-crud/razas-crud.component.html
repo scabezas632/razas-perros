@@ -1,0 +1,69 @@
+<h1 *ngIf="raza.nombre!==''">Editar {{ raza.nombre }}</h1>
+<h1 *ngIf="raza.nombre===''">Crear Nueva Raza</h1>
+
+<button [routerLink]="['/admin']"
+        class="btn btn-outline-danger">
+  Regresar
+</button>
+<button (click)="agregarNuevo(forma)"
+        type="button"
+        class="btn btn-outline-success">
+  Nueva Raza
+</button>
+<hr>
+
+<div class="row animated fadeIn fast">
+  <div class="col-md-12">
+
+    <form ngNativeValidate #forma="ngForm" (ngSubmit)="guardar(forma.value)">
+      <div class="form-group">
+        <label>Nombre: </label>
+        <input type="text" name=""
+              [ngModel]="raza.nombre"
+              name="nombre"
+              class="form-control"
+              placeholder="Nombre de la Raza"
+              required>
+      </div>
+      
+      <div class="form-group">
+        <label>País: </label>
+        <select [ngModel]="raza.pais" name="pais"
+                class="form-control" required>
+          <option value="undefined" disabled  selected> Seleccione un país de origen </option>
+          <option value="1">Chile</option>
+          <option value="2">Perú</option>
+          <option value="3">Alemania</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Tamaño: </label>
+        <select [ngModel]="raza.tamanio" name="tamanio"
+                class="form-control" required>
+          <option value="undefined" disabled  selected> Seleccione el tamaño de la raza </option>
+          <option value="1">Chico</option>
+          <option value="2">Mediano</option>
+          <option value="3">Grande</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Información: </label>
+        <textarea type="text" [ngModel]="raza.info" name="info"
+              class="form-control"
+              placeholder="Nombre de la Raza"
+              required>
+        </textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-outline-primary">
+          Guardar Cambios
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

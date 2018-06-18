@@ -4,4 +4,5 @@ export interface Raza {
     pais: string;
     tamanio: string;
     img: string;
+    id?: string;
 }

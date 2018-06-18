@@ -1,0 +1,61 @@
+ <h1>CRUD Razas de Perros</h1>
+<hr>
+
+<div class="row">
+  <div class="col-md-12 text-right">
+    <button [routerLink]="['/admin', 'nuevo']"
+            class="btn btn-outline-success"
+            type="button" name="button">
+      Nueva raza
+    </button>
+  </div>
+</div>
+<br>
+
+<div class="row animated fadeIn fast">
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Pais</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let k of razas | keys; let i = index">
+            <th scope="row">{{ i+1 }}</th>
+            <td>{{ razas[k].nombre }}</td>
+            <td>{{ razas[k].pais }}</td>
+            <td>
+                <button [routerLink]="['/admin',k]"
+                        class="btn btn-outline-primary"
+                        type="button" name="button">
+                  Editar
+                </button>
+
+                <button (click)="eliminarRaza(k)"
+                        class="btn btn-outline-danger"
+                        type="button" name="button">
+                  Eliminar
+                </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div *ngIf="(razas | keys ).length===0 && !loading"
+           class="alert alert-info" role="alert">
+        <strong>No hay</strong> razas registradas.
+      </div>
+      
+      <div *ngIf="loading"
+           class="alert alert-warning" role="alert">
+        <strong>Carango...</strong> por favor espere.
+      </div>
+
+    </div>
+  </div>
+</div>
