@@ -10,7 +10,7 @@ import { Raza } from '../../../interfaces/raza.interface';
 export class RazasComponent implements OnInit {
 
   razas: any[] = [];
-  loading: boolean = true;
+  loading = true;
 
   constructor( private _razasService: RazasService ) {
     this._razasService.obtenerRazas()

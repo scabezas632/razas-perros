@@ -6,7 +6,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // SE IMPORTAN LOS COMPONENTES QUE DEPENDEN DE ESTE MODULO
 import { RazasCRUDComponent } from './razas-crud/razas-crud.component';
 import { RazasComponent } from './razas/razas.component';
-import { KeysPipe } from '../../pipes/keys.pipe';
+import { PipesModule } from '../../pipes/pipes.module';
+// import { KeysPipe } from '../../pipes/keys.pipe';
 
 const PAGES_ROUTES: Routes = [
   // RUTAS DE LOS COMPONENTES
@@ -20,6 +21,7 @@ const PAGES_ROUTES: Routes = [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    PipesModule,
     // SE ESPECIFICA QUE ESTE MODULO SERVIRÁ COMO RUTA HIJA
     RouterModule.forChild(PAGES_ROUTES)
   ],
@@ -27,7 +29,7 @@ const PAGES_ROUTES: Routes = [
     // SE DECLARAN LOS COMPONENTES QUE SE INICIARÁN JUNTO CON EL MODULO
     RazasComponent,
     RazasCRUDComponent,
-    KeysPipe
+    // KeysPipe
   ]
 })
 export class AdminModule { }

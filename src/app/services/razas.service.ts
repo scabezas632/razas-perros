@@ -30,14 +30,6 @@ export class RazasService {
 
   constructor( private http: HttpClient ) { }
 
-  getRazas() {
-    return this.razas;
-  }
-
-  getRaza(id: number) {
-    return this.razas[id];
-  }
-
   buscarTermino( termino: string ) {
     const razaArray: Raza[] = [];
     termino = termino.toLowerCase();

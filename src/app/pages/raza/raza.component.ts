@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RazasService } from '../../services/razas.service';
+import { Raza } from '../../interfaces/raza.interface';
 
 @Component({
   selector: 'app-raza',
@@ -9,16 +10,29 @@ import { RazasService } from '../../services/razas.service';
 })
 export class RazaComponent implements OnInit {
 
-  raza: any = { };
+  raza: Raza = {
+    nombre: '',
+    info: '',
+    pais: '',
+    tamanio: '',
+    img: ''
+  };
 
-  constructor( private activatedRouted: ActivatedRoute,
+  nuevo = false;
+  id: string;
+
+  constructor( private route: ActivatedRoute,
                private _razasService: RazasService ) {
 
-    this.activatedRouted.params.subscribe( params => {
-      this.raza = this._razasService.getRaza(params['id']);
-      console.log(this.raza);
+    this.route.params.subscribe( parametros => {
+      this.id = parametros['id'];
+      if (this.id !== 'nuevo') {
+        this._razasService.obtenerRaza( this.id )
+            .subscribe( (data: Raza) => {
+              this.raza = data;
+            });
+      }
     });
-
    }
 
   ngOnInit() {

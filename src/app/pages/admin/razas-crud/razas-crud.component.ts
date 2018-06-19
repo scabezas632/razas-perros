@@ -22,7 +22,7 @@ export class RazasCRUDComponent implements OnInit {
     img: ''
   };
 
-  nuevo: boolean = false;
+  nuevo = false;
   id: string;
 
   constructor( private _razasService: RazasService,
