@@ -53,6 +53,7 @@ export class RazasCRUDComponent implements OnInit {
         this._razasService.obtenerRaza( this.id )
             .subscribe( (data: Raza) => {
               this.raza = data;
+              this.raza.img = data.img;
               if ( data.img !== '' ) {
                 const urlTemporal: UrlImage = new UrlImage();
                 urlTemporal.url = data.img;
@@ -72,7 +73,7 @@ export class RazasCRUDComponent implements OnInit {
   }
 
   guardar( razaForma: Raza ) {
-    this._razasService.cargarAFirebase( this.archivo, razaForma, this.id );
+    this._razasService.cargarAFirebase( this.archivo, razaForma, this.id, this.raza.img );
   }
 
   agregarNuevo( razaForma: NgForm ) {

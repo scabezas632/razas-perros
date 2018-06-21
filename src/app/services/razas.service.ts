@@ -105,7 +105,7 @@ export class RazasService {
     return url;
   }
 
-  cargarAFirebase( imagen: FileItem[], raza: Raza, id: string ) {
+  cargarAFirebase( imagen: FileItem[], raza: Raza, id: string, urlPrevia: string ) {
 
     if ( !imagen[0] ) {
       console.log('Debe seleccionar una imagen.');
@@ -120,9 +120,12 @@ export class RazasService {
       // return;
     }
 
-    const referenciaImagen = storageRef.child( `${ this.CARPETA_IMAGENES }/${ imagen[0].nombreArchivo }` );
+    const nombreArchivo = imagen[0].nombreArchivo.split('.')[0];
+    const extensionArchivo = imagen[0].nombreArchivo.split('.')[1];
+
+    const referenciaImagen = storageRef.child( `${ this.CARPETA_IMAGENES }/${ nombreArchivo }-${ id }.${ extensionArchivo }` );
     const uploadTask: firebase.storage.UploadTask =
-            storageRef.child(`${ this.CARPETA_IMAGENES }/${ imagen[0].nombreArchivo }`)
+            storageRef.child(`${ this.CARPETA_IMAGENES }/${ nombreArchivo }-${ id }.${ extensionArchivo }`)
                       .put(imagen[0].archivo);
 
     uploadTask.on( firebase.storage.TaskEvent.STATE_CHANGED,
@@ -133,6 +136,9 @@ export class RazasService {
               referenciaImagen.getDownloadURL().then(
                 ( urlImagen ) => {
                     console.log('Imagen cargada correctamente');
+                    if (urlPrevia !== '') {
+                      this.borrarImagenAnterior( urlPrevia );
+                    }
                     // Una vez que la imagen está subida, se le asigna los atributos a la clase
                     imagen[0].url = urlImagen;
                     imagen[0].estaSubiendo = false;
@@ -164,6 +170,13 @@ export class RazasService {
         // this.router.navigate(['/admin']);
       }, error => console.log(error));
     }
+  }
+
+  private borrarImagenAnterior( url: string ) {
+    const nombreArchivo = url.split('%2F')[1].split('?')[0];
+    const storageRef = firebase.storage().ref();
+    storageRef.child(`${this.CARPETA_IMAGENES}/${nombreArchivo}`).delete();
+    console.log('La imagen anterior se ha eliminado correctamente.');
   }
 
 }
