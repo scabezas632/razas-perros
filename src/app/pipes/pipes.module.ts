@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { KeysPipe } from './keys.pipe';
 import { SearchPipe } from './search.pipe';
+import { ImagenPipe } from './imagen.pipe';
+
 
 @NgModule({
   imports: [
@@ -9,11 +11,13 @@ import { SearchPipe } from './search.pipe';
   ],
   exports: [
     KeysPipe,
-    SearchPipe
+    SearchPipe,
+    ImagenPipe
   ],
   declarations: [
     KeysPipe,
-    SearchPipe
+    SearchPipe,
+    ImagenPipe
   ]
 })
 export class PipesModule { }

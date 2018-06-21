@@ -5,6 +5,8 @@ import { RazasService } from '../../../services/razas.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import 'rxjs/operators';
 import { NgForm } from '@angular/forms';
+import { FileItem } from '../../../models/file-item';
+import { UrlImage } from '../../../models/url-image';
 
 
 @Component({
@@ -25,6 +27,14 @@ export class RazasCRUDComponent implements OnInit {
   nuevo = false;
   id: string;
 
+  // Variables para el DropZone
+  archivo: FileItem[] = [];
+  cursorSobreElemento = false;
+  mostrarDropZone = true;
+  inputFile: any;
+
+  url: UrlImage[] = [];
+
   constructor( private _razasService: RazasService,
                private router: Router,
                private route: ActivatedRoute ) {
@@ -42,20 +52,12 @@ export class RazasCRUDComponent implements OnInit {
   ngOnInit() {
   }
 
+  previewImage(event: any) {
+    this._razasService.previewImage( event, this.url );
+  }
+
   guardar( razaForma: Raza ) {
-
-    if (this.id === 'nuevo') {
-      this._razasService.nuevaRaza( razaForma )
-      .subscribe( (data: any) => {
-        this.router.navigate(['/admin', data.name]);
-      }, error => console.log(error));
-    } else {
-      this._razasService.actualizarRaza( razaForma, this.id )
-      .subscribe( (data: any) => {
-        console.log(data);
-      }, error => console.log(error));
-    }
-
+    this._razasService.cargarAFirebase( this.archivo, razaForma, this.id );
   }
 
   agregarNuevo( razaForma: NgForm ) {

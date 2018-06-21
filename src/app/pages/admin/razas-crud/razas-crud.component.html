@@ -1,69 +1,110 @@
-<h1 *ngIf="raza.nombre!==''">Editar {{ raza.nombre }}</h1>
-<h1 *ngIf="raza.nombre===''">Crear Nueva Raza</h1>
+<h1 *ngIf="id!=='nuevo'">Editar {{ raza.nombre }}</h1>
+<h1 *ngIf="id==='nuevo'">Crear Nueva Raza: {{ raza.nombre }}</h1>
 
-<button [routerLink]="['/admin']"
-        class="btn btn-outline-danger">
+<button [routerLink]="['/admin']" class="btn btn-outline-danger">
   Regresar
 </button>
-<button (click)="agregarNuevo(forma)"
-        type="button"
-        class="btn btn-outline-success">
+<button (click)="agregarNuevo(forma)" type="button" class="btn btn-outline-success">
   Nueva Raza
 </button>
 <hr>
 
-<div class="row animated fadeIn fast">
-  <div class="col-md-12">
+<div class="animated fadeIn fast">
 
     <form ngNativeValidate #forma="ngForm" (ngSubmit)="guardar(forma.value)">
-      <div class="form-group">
-        <label>Nombre: </label>
-        <input type="text" name=""
-              [ngModel]="raza.nombre"
-              name="nombre"
-              class="form-control"
-              placeholder="Nombre de la Raza"
-              required>
-      </div>
-      
-      <div class="form-group">
-        <label>País: </label>
-        <select [ngModel]="raza.pais" name="pais"
-                class="form-control" required>
-          <option value="undefined" disabled  selected> Seleccione un país de origen </option>
-          <option value="Chile">Chile</option>
-          <option value="Perú">Perú</option>
-          <option value="Alemania">Alemania</option>
-        </select>
-      </div>
 
-      <div class="form-group">
-        <label>Tamaño: </label>
-        <select [ngModel]="raza.tamanio" name="tamanio"
-                class="form-control" required>
-          <option value="undefined" disabled  selected> Seleccione el tamaño de la raza </option>
-          <option value="Chico">Chico</option>
-          <option value="Mediano">Mediano</option>
-          <option value="Grande">Grande</option>
-        </select>
-      </div>
+        <div class="row">
 
-      <div class="form-group">
-        <label>Información: </label>
-        <textarea type="text" [ngModel]="raza.info" name="info"
-              class="form-control"
-              placeholder="Nombre de la Raza"
-              required>
-        </textarea>
-      </div>
+            <div class="col-md-6 text-center width-100">
+                <div appNgDropFiles [archivo]="archivo" (mostrarDropZone)="mostrarDropZone = $event" (urlDrop)="url = $event" (mouseSobre)="cursorSobreElemento = $event" [ngClass]="{ 'file-over': cursorSobreElemento }" class="well drop-zone">
+                    <div class="drop-or-select" [ngClass]="{ 'mostrar': mostrarDropZone, 'no-mostrar': url[0]?.url!=='' && !mostrarDropZone }">
+                        <h4>Arrastre o...</h4>
 
-      <div class="form-group">
-        <button type="submit" class="btn btn-outline-primary">
-          Guardar Cambios
-        </button>
-      </div>
+                        <div class="custom-file" id="customFile">
+                            <input appNgDropFiles [archivo]="archivo" type="file" class="custom-file-input" [(ngModel)]="inputFile" name="inputFile" (change)="previewImage($event)">
+                            <label class="custom-file-label">
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                        <i class="fa fa-upload"></i>
+                                    </span>
+                                </span>
+                                <a class="text-button-file"> Seleccione una imagen</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div [ngClass]="{ 'image': mostrarDropZone}" *ngIf="url[0]?.url!==''">
+                        <img [src]="url[0]?.url">
+                    </div>
+
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': archivo[0]?.progreso + '%' }" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="row">
+
+                    <div class="form-group width-100">
+                        <label>Nombre Raza: </label>
+                        <input type="text" name="" [ngModel]="raza.nombre" name="nombre" class="form-control" placeholder="Nombre de la Raza" required>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group width-100">
+                        <label>País: </label>
+                        <select [ngModel]="raza.pais" name="pais" class="form-control" required>
+              <option value="undefined" disabled  selected> Seleccione un país de origen </option>
+              <option value="Chile">Chile</option>
+              <option value="Perú">Perú</option>
+              <option value="Alemania">Alemania</option>
+            </select>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group width-100">
+                        <label>Tamaño: </label>
+                        <select [ngModel]="raza.tamanio" name="tamanio" class="form-control" required>
+              <option value="undefined" disabled  selected> Seleccione el tamaño de la raza </option>
+              <option value="Chico">Chico</option>
+              <option value="Mediano">Mediano</option>
+              <option value="Grande">Grande</option>
+            </select>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="form-group">
+                    <label>Información: </label>
+                    <textarea type="text" [ngModel]="raza.info" name="info" class="form-control" placeholder="Nombre de la Raza" required>
+            </textarea>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-primary">
+                Guardar Cambios
+            </button>
+        </div>
 
     </form>
 
-  </div>
 </div>

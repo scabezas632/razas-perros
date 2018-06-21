@@ -1,0 +1,1051 @@
+[{
+        "Breed": "Akita",
+        "height_low_inches": 26,
+        "height_high_inches": 28,
+        "weight_low_lbs": 80,
+        "weight_high_lbs": 120
+    },
+    {
+        "Breed": "Anatolian Sheepdog",
+        "height_low_inches": 27,
+        "height_high_inches": 29,
+        "weight_low_lbs": 100,
+        "weight_high_lbs": 150
+    },
+    {
+        "Breed": "Bernese Mountain Dog",
+        "height_low_inches": 23,
+        "height_high_inches": 27,
+        "weight_low_lbs": 85,
+        "weight_high_lbs": 110
+    },
+    {
+        "Breed": "Bloodhound",
+        "height_low_inches": 24,
+        "height_high_inches": 26,
+        "weight_low_lbs": 80,
+        "weight_high_lbs": 120
+    },
+    {
+        "Breed": "Borzoi",
+        "height_low_inches": 26,
+        "height_high_inches": 28,
+        "weight_low_lbs": 70,
+        "weight_high_lbs": 100
+    },
+    {
+        "Breed": "Bullmastiff",
+        "height_low_inches": 25,
+        "height_high_inches": 27,
+        "weight_low_lbs": 100,
+        "weight_high_lbs": 130
+    },
+    {
+        "Breed": "Great Dane",
+        "height_low_inches": 32,
+        "height_high_inches": 32,
+        "weight_low_lbs": 120,
+        "weight_high_lbs": 160
+    },
+    {
+        "Breed": "Great Pyrenees",
+        "height_low_inches": 27,
+        "height_high_inches": 32,
+        "weight_low_lbs": 95,
+        "weight_high_lbs": 120
+    },
+    {
+        "Breed": "Great Swiss Mountain Dog",
+        "height_low_inches": 23,
+        "height_high_inches": 28,
+        "weight_low_lbs": 130,
+        "weight_high_lbs": 150
+    },
+    {
+        "Breed": "Irish Wolfhound",
+        "height_low_inches": 28,
+        "height_high_inches": 35,
+        "weight_low_lbs": 90,
+        "weight_high_lbs": 150
+    },
+    {
+        "Breed": "Kuvasz",
+        "height_low_inches": 28,
+        "height_high_inches": 30,
+        "weight_low_lbs": 70,
+        "weight_high_lbs": 120
+    },
+    {
+        "Breed": "Mastiff",
+        "height_low_inches": 27,
+        "height_high_inches": 30,
+        "weight_low_lbs": 175,
+        "weight_high_lbs": 190
+    },
+    {
+        "Breed": "Neopolitan Mastiff",
+        "height_low_inches": 24,
+        "height_high_inches": 30,
+        "weight_low_lbs": 100,
+        "weight_high_lbs": 150
+    },
+    {
+        "Breed": "Newfoundland",
+        "height_low_inches": 26,
+        "height_high_inches": 28,
+        "weight_low_lbs": 100,
+        "weight_high_lbs": 150
+    },
+    {
+        "Breed": "Otter Hound",
+        "height_low_inches": 24,
+        "height_high_inches": 26,
+        "weight_low_lbs": 65,
+        "weight_high_lbs": 110
+    },
+    {
+        "Breed": "Rottweiler",
+        "height_low_inches": 22,
+        "height_high_inches": 27,
+        "weight_low_lbs": 90,
+        "weight_high_lbs": 110
+    },
+    {
+        "Breed": "Saint Bernard",
+        "height_low_inches": 25,
+        "height_high_inches": 28,
+        "weight_low_lbs": 110,
+        "weight_high_lbs": 190
+    },
+    {
+        "Breed": "Afghan Hound",
+        "height_low_inches": 25,
+        "height_high_inches": 27,
+        "weight_low_lbs": 50,
+        "weight_high_lbs": 60
+    },
+    {
+        "Breed": "Alaskan Malamute",
+        "height_low_inches": "na",
+        "height_high_inches": "na",
+        "weight_low_lbs": "na",
+        "weight_high_lbs": "na"
+    },
+    {
+        "Breed": "American Foxhound",
+        "height_low_inches": 22,
+        "height_high_inches": 25,
+        "weight_low_lbs": 65,
+        "weight_high_lbs": 70
+    },
+    {
+        "Breed": "Beauceron",
+        "height_low_inches": 24,
+        "height_high_inches": 27,
+        "weight_low_lbs": 100,
+        "weight_high_lbs": 120
+    },
+    {
+        "Breed": "Belgian Malinois",
+        "height_low_inches": 22,
+        "height_high_inches": 26,
+        "weight_low_lbs": 60,
+        "weight_high_lbs": 65
+    },
+    {
+        "Breed": "Belgian Sheepdog",
+        "height_low_inches": 22,
+        "height_high_inches": 26,
+        "weight_low_lbs": 60,
+        "weight_high_lbs": 75
+    },
+    {
+        "Breed": "Belgian Tervuren",
+        "height_low_inches": 22,
+        "height_high_inches": 26,
+        "weight_low_lbs": 60,
+        "weight_high_lbs": 75
+    },
+    {
+        "Breed": "Black And Tan Coonhound",
+        "height_low_inches": 23,
+        "height_high_inches": 27,
+        "weight_low_lbs": 50,
+        "weight_high_lbs": 75
+    },
+    {
+        "Breed": "Black Russian Terrier",
+        "height_low_inches": 25,
+        "height_high_inches": 29,
+        "weight_low_lbs": 80,
+        "weight_high_lbs": 140
+    },
+    {
+        "Breed": "Bouvier Des Flandres",
+        "height_low_inches": 23,
+        "height_high_inches": 27,
+        "weight_low_lbs": 75,
+        "weight_high_lbs": 95
+    },
+    {
+        "Breed": "Boxer",
+        "height_low_inches": 21,
+        "height_high_inches": 25,
+        "weight_low_lbs": 65,
+        "weight_high_lbs": 70
+    },
+    {
+        "Breed": "Briard",
+        "height_low_inches": 23,
+        "height_high_inches": 27,
+        "weight_low_lbs": 74,
+        "weight_high_lbs": 76
+    },
+    {
+        "Breed": "Chesapeake Bay Retriever",
+        "height_low_inches": 21,
+        "height_high_inches": 26,
+        "weight_low_lbs": 55,
+        "weight_high_lbs": 75
+    },
+    {
+        "Breed": "Clumber Spaniel",
+        "height_low_inches": 19,
+        "height_high_inches": 20,
+        "weight_low_lbs": 35,
+        "weight_high_lbs": 65
+    },
+    {
+        "Breed": "Collie (Rough) & (Smooth)",
+        "height_low_inches": 22,
+        "height_high_inches": 26,
+        "weight_low_lbs": 50,
+        "weight_high_lbs": 75
+    },
+    {
+        "Breed": "Curly Coated Retriever",
+        "height_low_inches": 25,
+        "height_high_inches": 27,
+        "weight_low_lbs": 65,
+        "weight_high_lbs": 80
+    },
+    {
+        "Breed": "Doberman Pinscher",
+        "height_low_inches": 26,
+        "height_high_inches": 28,
+        "weight_low_lbs": 60,
+        "weight_high_lbs": 100
+    },
+    {
+        "Breed": "English Foxhound",
+        "height_low_inches": 22,
+        "height_high_inches": 25,
+        "weight_low_lbs": 65,
+        "weight_high_lbs": 70
+    },
+    {
+        "Breed": "English Setter",
+        "height_low_inches": 23,
+        "height_high_inches": 27,
+        "weight_low_lbs": 45,
+        "weight_high_lbs": 80
+    },
+    {
+        "Breed": "German Shepherd Dog",
+        "height_low_inches": 22,
+        "height_high_inches": 26,
+        "weight_low_lbs": 75,
+        "weight_high_lbs": 90
+    },
+    {
+        "Breed": "German Shorthaired Pointer",
+        "height_low_inches": 20,
+        "height_high_inches": 27,
+        "weight_low_lbs": 50,
+        "weight_high_lbs": 80
+    },
+    {
+        "Breed": "German Wirehaired Pointer",
+        "height_low_inches": 22,
+        "height_high_inches": 26,
+        "weight_low_lbs": 60,
+        "weight_high_lbs": 70
+    },
+    {
+        "Breed": "Giant Schnauzer",
+        "height_low_inches": 25,
+        "height_high_inches": 28,
+        "weight_low_lbs": 70,
+        "weight_high_lbs": 75
+    },
+    {
+        "Breed": "Golden Retriever",
+        "height_low_inches": 21,
+        "height_high_inches": 24,
+        "weight_low_lbs": 55,
+        "weight_high_lbs": 75
+    },
+    {
+        "Breed": "Gordon Setter",
+        "height_low_inches": 23,
+        "height_high_inches": 27,
+        "weight_low_lbs": 45,
+        "weight_high_lbs": 80
+    },
+    {
+        "Breed": "Greyhound",
+        "height_low_inches": 27,
+        "height_high_inches": 30,
+        "weight_low_lbs": 60,
+        "weight_high_lbs": 70
+    },
+    {
+        "Breed": "Irish Setter",
+        "height_low_inches": 25,
+        "height_high_inches": 27,
+        "weight_low_lbs": 60,
+        "weight_high_lbs": 70
+    },
+    {
+        "Breed": "Komondor",
+        "height_low_inches": 26.5,
+        "height_high_inches": 35.5,
+        "weight_low_lbs": 80,
+        "weight_high_lbs": 135
+    },
+    {
+        "Breed": "Labrador Retriever",
+        "height_low_inches": 21,
+        "height_high_inches": 24,
+        "weight_low_lbs": 55,
+        "weight_high_lbs": 80
+    },
+    {
+        "Breed": "Old English Sheepdog (Bobtail)",
+        "height_low_inches": 20,
+        "height_high_inches": 24,
+        "weight_low_lbs": 60,
+        "weight_high_lbs": 65
+    },
+    {
+        "Breed": "Poodle Standard",
+        "height_low_inches": 15,
+        "height_high_inches": 25,
+        "weight_low_lbs": 45,
+        "weight_high_lbs": 45
+    },
+    {
+        "Breed": "Rhodesian Ridgeback",
+        "height_low_inches": 24,
+        "height_high_inches": 27,
+        "weight_low_lbs": 70,
+        "weight_high_lbs": 85
+    },
+    {
+        "Breed": "Scottish Deerhound",
+        "height_low_inches": 28,
+        "height_high_inches": 32,
+        "weight_low_lbs": 75,
+        "weight_high_lbs": 110
+    },
+    {
+        "Breed": "Spinone Italiano",
+        "height_low_inches": 23,
+        "height_high_inches": 28,
+        "weight_low_lbs": 65,
+        "weight_high_lbs": 80
+    },
+    {
+        "Breed": "Tibetan Mastiff",
+        "height_low_inches": 24,
+        "height_high_inches": 26,
+        "weight_low_lbs": 140,
+        "weight_high_lbs": 170
+    },
+    {
+        "Breed": "Weimaraner",
+        "height_low_inches": 25,
+        "height_high_inches": 27,
+        "weight_low_lbs": 70,
+        "weight_high_lbs": 85
+    },
+    {
+        "Breed": "Airdale Terrier",
+        "height_low_inches": 22,
+        "height_high_inches": 24,
+        "weight_low_lbs": 45,
+        "weight_high_lbs": 45
+    },
+    {
+        "Breed": "American Staffordshire Terrier",
+        "height_low_inches": 17,
+        "height_high_inches": 19,
+        "weight_low_lbs": 40,
+        "weight_high_lbs": 50
+    },
+    {
+        "Breed": "American Water Spaniel",
+        "height_low_inches": 15,
+        "height_high_inches": 18,
+        "weight_low_lbs": 25,
+        "weight_high_lbs": 45
+    },
+    {
+        "Breed": "Australian Cattle Dog",
+        "height_low_inches": 17,
+        "height_high_inches": 20,
+        "weight_low_lbs": 35,
+        "weight_high_lbs": 45
+    },
+    {
+        "Breed": "Australian Shepherd",
+        "height_low_inches": 18,
+        "height_high_inches": 23,
+        "weight_low_lbs": 40,
+        "weight_high_lbs": 60
+    },
+    {
+        "Breed": "Basset Hound",
+        "height_low_inches": 14,
+        "height_high_inches": 14,
+        "weight_low_lbs": 40,
+        "weight_high_lbs": 50
+    },
+    {
+        "Breed": "Bearded Collie",
+        "height_low_inches": 20,
+        "height_high_inches": 22,
+        "weight_low_lbs": 40,
+        "weight_high_lbs": 60
+    },
+    {
+        "Breed": "Border Collie",
+        "height_low_inches": 19,
+        "height_high_inches": 21,
+        "weight_low_lbs": 40,
+        "weight_high_lbs": 40
+    },
+    {
+        "Breed": "Brittany",
+        "height_low_inches": 17,
+        "height_high_inches": 21,
+        "weight_low_lbs": 30,
+        "weight_high_lbs": 40
+    },
+    {
+        "Breed": "Bull Dog",
+        "height_low_inches": 12,
+        "height_high_inches": 16,
+        "weight_low_lbs": 50,
+        "weight_high_lbs": 60
+    },
+    {
+        "Breed": "Bull Terrier",
+        "height_low_inches": 21,
+        "height_high_inches": 22,
+        "weight_low_lbs": 50,
+        "weight_high_lbs": 70
+    },
+    {
+        "Breed": "Canaan Dog",
+        "height_low_inches": 19,
+        "height_high_inches": 24,
+        "weight_low_lbs": 35,
+        "weight_high_lbs": 55
+    },
+    {
+        "Breed": "Chinese Shar Pei",
+        "height_low_inches": 18,
+        "height_high_inches": 20,
+        "weight_low_lbs": 45,
+        "weight_high_lbs": 55
+    },
+    {
+        "Breed": "Chow Chow",
+        "height_low_inches": 19,
+        "height_high_inches": 22,
+        "weight_low_lbs": 45,
+        "weight_high_lbs": 55
+    },
+    {
+        "Breed": "Cocker Spaniel-American",
+        "height_low_inches": 15,
+        "height_high_inches": 16,
+        "weight_low_lbs": 22,
+        "weight_high_lbs": 28
+    },
+    {
+        "Breed": "Cocker Spaniel-English",
+        "height_low_inches": 15,
+        "height_high_inches": 17,
+        "weight_low_lbs": 25,
+        "weight_high_lbs": 35
+    },
+    {
+        "Breed": "Dalmatian",
+        "height_low_inches": 19,
+        "height_high_inches": 23,
+        "weight_low_lbs": 45,
+        "weight_high_lbs": 70
+    },
+    {
+        "Breed": "English Springer Spaniel",
+        "height_low_inches": 20,
+        "height_high_inches": 20,
+        "weight_low_lbs": 45,
+        "weight_high_lbs": 55
+    },
+    {
+        "Breed": "Field Spaniel",
+        "height_low_inches": 18,
+        "height_high_inches": 18,
+        "weight_low_lbs": 35,
+        "weight_high_lbs": 50
+    },
+    {
+        "Breed": "Flat Coated Retriever",
+        "height_low_inches": 22,
+        "height_high_inches": 23,
+        "weight_low_lbs": 60,
+        "weight_high_lbs": 70
+    },
+    {
+        "Breed": "Finnish Spitz",
+        "height_low_inches": 15,
+        "height_high_inches": 20,
+        "weight_low_lbs": 31,
+        "weight_high_lbs": 35
+    },
+    {
+        "Breed": "Harrier",
+        "height_low_inches": 19,
+        "height_high_inches": 21,
+        "weight_low_lbs": 40,
+        "weight_high_lbs": 60
+    },
+    {
+        "Breed": "Ibizan Hound",
+        "height_low_inches": 22,
+        "height_high_inches": 29,
+        "weight_low_lbs": 42,
+        "weight_high_lbs": 55
+    },
+    {
+        "Breed": "Irish Terrier",
+        "height_low_inches": 18,
+        "height_high_inches": 19,
+        "weight_low_lbs": 25,
+        "weight_high_lbs": 27
+    },
+    {
+        "Breed": "Irish Water Spaniel",
+        "height_low_inches": 10,
+        "height_high_inches": 23,
+        "weight_low_lbs": 45,
+        "weight_high_lbs": 65
+    },
+    {
+        "Breed": "Keeshond",
+        "height_low_inches": 17,
+        "height_high_inches": 19,
+        "weight_low_lbs": 35,
+        "weight_high_lbs": 50
+    },
+    {
+        "Breed": "Kerry Blue Terrier",
+        "height_low_inches": 17,
+        "height_high_inches": 21,
+        "weight_low_lbs": 30,
+        "weight_high_lbs": 45
+    },
+    {
+        "Breed": "Norwegian Elkhound",
+        "height_low_inches": 19,
+        "height_high_inches": 20,
+        "weight_low_lbs": 40,
+        "weight_high_lbs": 60
+    },
+    {
+        "Breed": "Nova Scotia Duck Tolling Retriever",
+        "height_low_inches": 17,
+        "height_high_inches": 21,
+        "weight_low_lbs": 35,
+        "weight_high_lbs": 50
+    },
+    {
+        "Breed": "Petit Basset Griffon Vendeen",
+        "height_low_inches": 13,
+        "height_high_inches": 15,
+        "weight_low_lbs": 30,
+        "weight_high_lbs": 40
+    },
+    {
+        "Breed": "Pharaoh Hound",
+        "height_low_inches": 21,
+        "height_high_inches": 25,
+        "weight_low_lbs": 45,
+        "weight_high_lbs": 55
+    },
+    {
+        "Breed": "Plott Hound",
+        "height_low_inches": 20,
+        "height_high_inches": 24,
+        "weight_low_lbs": 45,
+        "weight_high_lbs": 55
+    },
+    {
+        "Breed": "Pointer",
+        "height_low_inches": 21,
+        "height_high_inches": 24,
+        "weight_low_lbs": 44,
+        "weight_high_lbs": 66
+    },
+    {
+        "Breed": "Polish Lowland Sheepdog",
+        "height_low_inches": 16,
+        "height_high_inches": 20,
+        "weight_low_lbs": 30,
+        "weight_high_lbs": 35
+    },
+    {
+        "Breed": "Portuguese Water Dog",
+        "height_low_inches": 20,
+        "height_high_inches": 23,
+        "weight_low_lbs": 42,
+        "weight_high_lbs": 60
+    },
+    {
+        "Breed": "Redbone Coonhound",
+        "height_low_inches": 21,
+        "height_high_inches": 27,
+        "weight_low_lbs": 50,
+        "weight_high_lbs": 70
+    },
+    {
+        "Breed": "Saluki",
+        "height_low_inches": 23,
+        "height_high_inches": 28,
+        "weight_low_lbs": 35,
+        "weight_high_lbs": 70
+    },
+    {
+        "Breed": "Samoyed",
+        "height_low_inches": 19,
+        "height_high_inches": 24,
+        "weight_low_lbs": 50,
+        "weight_high_lbs": 65
+    },
+    {
+        "Breed": "Siberian Husky",
+        "height_low_inches": 20,
+        "height_high_inches": 23,
+        "weight_low_lbs": 40,
+        "weight_high_lbs": 60
+    },
+    {
+        "Breed": "Soft-Coated Wheaten Terrier",
+        "height_low_inches": 18,
+        "height_high_inches": 20,
+        "weight_low_lbs": 35,
+        "weight_high_lbs": 45
+    },
+    {
+        "Breed": "Staffordshire Bull Terrier",
+        "height_low_inches": 14,
+        "height_high_inches": 16,
+        "weight_low_lbs": 24,
+        "weight_high_lbs": 28
+    },
+    {
+        "Breed": "Standard Schnauzer",
+        "height_low_inches": 17,
+        "height_high_inches": 19,
+        "weight_low_lbs": 33,
+        "weight_high_lbs": 33
+    },
+    {
+        "Breed": "Sussex Spaniel",
+        "height_low_inches": 15,
+        "height_high_inches": 16,
+        "weight_low_lbs": 40,
+        "weight_high_lbs": 45
+    },
+    {
+        "Breed": "Vizsla",
+        "height_low_inches": 48,
+        "height_high_inches": 66,
+        "weight_low_lbs": 22,
+        "weight_high_lbs": 25
+    },
+    {
+        "Breed": "Welsh Springer Spaniel",
+        "height_low_inches": 16,
+        "height_high_inches": 19,
+        "weight_low_lbs": 35,
+        "weight_high_lbs": 45
+    },
+    {
+        "Breed": "Wirehaired Pointing Griffon",
+        "height_low_inches": 20,
+        "height_high_inches": 24,
+        "weight_low_lbs": 45,
+        "weight_high_lbs": 60
+    },
+    {
+        "Breed": "American Eskimo",
+        "height_low_inches": 9,
+        "height_high_inches": 19,
+        "weight_low_lbs": 25,
+        "weight_high_lbs": 30
+    },
+    {
+        "Breed": "Australian Terrier",
+        "height_low_inches": 10,
+        "height_high_inches": 10,
+        "weight_low_lbs": 10,
+        "weight_high_lbs": 14
+    },
+    {
+        "Breed": "Basenji",
+        "height_low_inches": 17,
+        "height_high_inches": 17,
+        "weight_low_lbs": 20,
+        "weight_high_lbs": 22
+    },
+    {
+        "Breed": "Beagle",
+        "height_low_inches": 13,
+        "height_high_inches": 16,
+        "weight_low_lbs": 18,
+        "weight_high_lbs": 30
+    },
+    {
+        "Breed": "Bedlington Terrier",
+        "height_low_inches": 15,
+        "height_high_inches": 16,
+        "weight_low_lbs": 18,
+        "weight_high_lbs": 23
+    },
+    {
+        "Breed": "Bichon Frise",
+        "height_low_inches": 9.5,
+        "height_high_inches": 11.5,
+        "weight_low_lbs": 10,
+        "weight_high_lbs": 18
+    },
+    {
+        "Breed": "Border Terrier",
+        "height_low_inches": 12,
+        "height_high_inches": 15,
+        "weight_low_lbs": 12,
+        "weight_high_lbs": 15
+    },
+    {
+        "Breed": "Boston Terrier",
+        "height_low_inches": 14,
+        "height_high_inches": 15,
+        "weight_low_lbs": 15,
+        "weight_high_lbs": 25
+    },
+    {
+        "Breed": "Brussels Griffon",
+        "height_low_inches": 7,
+        "height_high_inches": 8,
+        "weight_low_lbs": 6,
+        "weight_high_lbs": 12
+    },
+    {
+        "Breed": "Cairn Terrier",
+        "height_low_inches": 9,
+        "height_high_inches": 10,
+        "weight_low_lbs": 14,
+        "weight_high_lbs": 14
+    },
+    {
+        "Breed": "Cardigan Welsh Corgi",
+        "height_low_inches": 10,
+        "height_high_inches": 12,
+        "weight_low_lbs": 25,
+        "weight_high_lbs": 35
+    },
+    {
+        "Breed": "Cavalier King Charles Spaniel",
+        "height_low_inches": 10,
+        "height_high_inches": 15,
+        "weight_low_lbs": 15,
+        "weight_high_lbs": 20
+    },
+    {
+        "Breed": "Coton de Tulear",
+        "height_low_inches": "na",
+        "height_high_inches": "na",
+        "weight_low_lbs": "na",
+        "weight_high_lbs": "na"
+    },
+    {
+        "Breed": "Dachshund",
+        "height_low_inches": 7,
+        "height_high_inches": 10,
+        "weight_low_lbs": 16,
+        "weight_high_lbs": 32
+    },
+    {
+        "Breed": "Dandie Dinmont Terrier",
+        "height_low_inches": 18,
+        "height_high_inches": 24,
+        "weight_low_lbs": 8,
+        "weight_high_lbs": 11
+    },
+    {
+        "Breed": "English Toy Spaniel",
+        "height_low_inches": 10,
+        "height_high_inches": 10,
+        "weight_low_lbs": 9,
+        "weight_high_lbs": 15
+    },
+    {
+        "Breed": "Fox Terrier ‰ÛÒ Smooth",
+        "height_low_inches": 13,
+        "height_high_inches": 16,
+        "weight_low_lbs": 15,
+        "weight_high_lbs": 20
+    },
+    {
+        "Breed": "Fox Terrier ‰ÛÒ Wirehair",
+        "height_low_inches": 13,
+        "height_high_inches": 16,
+        "weight_low_lbs": 15,
+        "weight_high_lbs": 20
+    },
+    {
+        "Breed": "French Bulldog",
+        "height_low_inches": 11,
+        "height_high_inches": 12,
+        "weight_low_lbs": 17,
+        "weight_high_lbs": 28
+    },
+    {
+        "Breed": "German Pinscher",
+        "height_low_inches": 16,
+        "height_high_inches": 19,
+        "weight_low_lbs": 25,
+        "weight_high_lbs": 35
+    },
+    {
+        "Breed": "Glen Imaal Terrier",
+        "height_low_inches": 14,
+        "height_high_inches": 14,
+        "weight_low_lbs": 34,
+        "weight_high_lbs": 36
+    },
+    {
+        "Breed": "Lakeland Terrier",
+        "height_low_inches": 13,
+        "height_high_inches": 14,
+        "weight_low_lbs": 15,
+        "weight_high_lbs": 17
+    },
+    {
+        "Breed": "Manchester Terrier (Standard)",
+        "height_low_inches": 15,
+        "height_high_inches": 16,
+        "weight_low_lbs": 17,
+        "weight_high_lbs": 18
+    },
+    {
+        "Breed": "Poodle Miniature",
+        "height_low_inches": 10,
+        "height_high_inches": 15,
+        "weight_low_lbs": 20,
+        "weight_high_lbs": 20
+    },
+    {
+        "Breed": "Pug",
+        "height_low_inches": 10,
+        "height_high_inches": 11,
+        "weight_low_lbs": 14,
+        "weight_high_lbs": 22
+    },
+    {
+        "Breed": "Puli",
+        "height_low_inches": 16,
+        "height_high_inches": 17,
+        "weight_low_lbs": 29,
+        "weight_high_lbs": 33
+    },
+    {
+        "Breed": "Schipperke",
+        "height_low_inches": 10,
+        "height_high_inches": 13,
+        "weight_low_lbs": 12,
+        "weight_high_lbs": 18
+    },
+    {
+        "Breed": "Scottish Terrier",
+        "height_low_inches": 10,
+        "height_high_inches": 12,
+        "weight_low_lbs": 18,
+        "weight_high_lbs": 22
+    },
+    {
+        "Breed": "Sealyham Terrier",
+        "height_low_inches": 12,
+        "height_high_inches": 12,
+        "weight_low_lbs": 18,
+        "weight_high_lbs": 20
+    },
+    {
+        "Breed": "Shetland Sheepdog (Sheltie)",
+        "height_low_inches": 13,
+        "height_high_inches": 16,
+        "weight_low_lbs": 14,
+        "weight_high_lbs": 20
+    },
+    {
+        "Breed": "Shiba Inu",
+        "height_low_inches": 13,
+        "height_high_inches": 16,
+        "weight_low_lbs": 15,
+        "weight_high_lbs": 30
+    },
+    {
+        "Breed": "Shih Tzu",
+        "height_low_inches": 8,
+        "height_high_inches": 11,
+        "weight_low_lbs": 9,
+        "weight_high_lbs": 16
+    },
+    {
+        "Breed": "Silky Terrier",
+        "height_low_inches": 9,
+        "height_high_inches": 10,
+        "weight_low_lbs": 8,
+        "weight_high_lbs": 11
+    },
+    {
+        "Breed": "Skye Terrier",
+        "height_low_inches": 10,
+        "height_high_inches": 10,
+        "weight_low_lbs": 25,
+        "weight_high_lbs": 25
+    },
+    {
+        "Breed": "Tibetan Spaniel",
+        "height_low_inches": 10,
+        "height_high_inches": 10,
+        "weight_low_lbs": 9,
+        "weight_high_lbs": 15
+    },
+    {
+        "Breed": "Tibetan Terrier",
+        "height_low_inches": 14,
+        "height_high_inches": 17,
+        "weight_low_lbs": 20,
+        "weight_high_lbs": 30
+    },
+    {
+        "Breed": "Welsh Terrier",
+        "height_low_inches": 15,
+        "height_high_inches": 15,
+        "weight_low_lbs": 20,
+        "weight_high_lbs": 21
+    },
+    {
+        "Breed": "West Highland White Terrier",
+        "height_low_inches": 11,
+        "height_high_inches": 11,
+        "weight_low_lbs": 13,
+        "weight_high_lbs": 15
+    },
+    {
+        "Breed": "Whippet",
+        "height_low_inches": 18,
+        "height_high_inches": 22,
+        "weight_low_lbs": 27,
+        "weight_high_lbs": 30
+    },
+    {
+        "Breed": "Affenpinscher",
+        "height_low_inches": 9,
+        "height_high_inches": 12,
+        "weight_low_lbs": 8,
+        "weight_high_lbs": 12
+    },
+    {
+        "Breed": "Chihuahua",
+        "height_low_inches": 6,
+        "height_high_inches": 9,
+        "weight_low_lbs": 2,
+        "weight_high_lbs": 5
+    },
+    {
+        "Breed": "Chinese Crested",
+        "height_low_inches": 11,
+        "height_high_inches": 13,
+        "weight_low_lbs": 5,
+        "weight_high_lbs": 12
+    },
+    {
+        "Breed": "Italian Greyhound",
+        "height_low_inches": 12,
+        "height_high_inches": 15,
+        "weight_low_lbs": 6,
+        "weight_high_lbs": 10
+    },
+    {
+        "Breed": "Japanese Chin",
+        "height_low_inches": 8,
+        "height_high_inches": 11,
+        "weight_low_lbs": 4,
+        "weight_high_lbs": 11
+    },
+    {
+        "Breed": "Maltese",
+        "height_low_inches": 8,
+        "height_high_inches": 10,
+        "weight_low_lbs": 4,
+        "weight_high_lbs": 6
+    },
+    {
+        "Breed": "Manchester Terrier (Toy)",
+        "height_low_inches": 10,
+        "height_high_inches": 12,
+        "weight_low_lbs": 6,
+        "weight_high_lbs": 8
+    },
+    {
+        "Breed": "Papillon",
+        "height_low_inches": 8,
+        "height_high_inches": 11,
+        "weight_low_lbs": 5,
+        "weight_high_lbs": 10
+    },
+    {
+        "Breed": "Pomeranian",
+        "height_low_inches": 12,
+        "height_high_inches": 12,
+        "weight_low_lbs": 3,
+        "weight_high_lbs": 7
+    },
+    {
+        "Breed": "Poodle Toy",
+        "height_low_inches": 10,
+        "height_high_inches": 10,
+        "weight_low_lbs": 10,
+        "weight_high_lbs": 10
+    },
+    {
+        "Breed": "Toy Fox Terrier",
+        "height_low_inches": 10,
+        "height_high_inches": 10,
+        "weight_low_lbs": 4,
+        "weight_high_lbs": 7
+    },
+    {
+        "Breed": "Yorkshire Terrier",
+        "height_low_inches": 8,
+        "height_high_inches": 8,
+        "weight_low_lbs": 3,
+        "weight_high_lbs": 7
+    }
+]
