@@ -59,11 +59,9 @@
                     <div class="form-group width-100">
                         <label>País: </label>
                         <select [ngModel]="raza.pais" name="pais" class="form-control" required>
-              <option value="undefined" disabled  selected> Seleccione un país de origen </option>
-              <option value="Chile">Chile</option>
-              <option value="Perú">Perú</option>
-              <option value="Alemania">Alemania</option>
-            </select>
+                            <option value="undefined" disabled  selected> Seleccione un país de origen </option>
+                            <option *ngFor="let p of paises" [ngValue]="p.nombre">{{p.nombre}}</option>
+                        </select>
                     </div>
 
                 </div>
@@ -73,11 +71,11 @@
                     <div class="form-group width-100">
                         <label>Tamaño: </label>
                         <select [ngModel]="raza.tamanio" name="tamanio" class="form-control" required>
-              <option value="undefined" disabled  selected> Seleccione el tamaño de la raza </option>
-              <option value="Chico">Chico</option>
-              <option value="Mediano">Mediano</option>
-              <option value="Grande">Grande</option>
-            </select>
+                            <option value="undefined" disabled  selected> Seleccione el tamaño de la raza </option>
+                            <option value="Chico">Chico</option>
+                            <option value="Mediano">Mediano</option>
+                            <option value="Grande">Grande</option>
+                        </select>
                     </div>
 
                 </div>

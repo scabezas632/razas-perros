@@ -6,6 +6,12 @@
   padding-bottom: 50px;
 } */
 
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
 
 /* .main-container{
   margin-top: 20px;

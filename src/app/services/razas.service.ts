@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Raza } from '../interfaces/raza.interface';
 import { map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -19,6 +20,7 @@ export class RazasService {
   private CARPETA_IMAGENES = 'img';
 
   constructor( private http: HttpClient,
+               private router: Router,
                private db: AngularFirestore ) { }
 
   nuevaRaza( raza: RazaClass ) {
@@ -104,6 +106,12 @@ export class RazasService {
   }
 
   cargarAFirebase( imagen: FileItem[], raza: Raza, id: string ) {
+
+    if ( !imagen[0] ) {
+      console.log('Debe seleccionar una imagen.');
+      return;
+    }
+
     // Primero se carga la imagen
     const storageRef = firebase.storage().ref();
 
@@ -148,7 +156,7 @@ export class RazasService {
     if (id === 'nuevo') {
       this.nuevaRaza( claseRaza )
       .subscribe( (data: any) => {
-        // this.router.navigate(['/admin', data.name]);
+        this.router.navigate(['/admin', data.name]);
       }, error => console.log(error));
     } else {
       this.actualizarRaza( claseRaza, id )

@@ -48,9 +48,9 @@ export class NgDropFilesDirective {
 
   @HostListener('mouseover')
   public onMouseOver() {
-    if ( this.url[0] ) {
+    // if ( this.url[0] ) {
       this.mostrarDropZone.emit( true );
-    }
+    // }
   }
 
   @HostListener('mouseout')

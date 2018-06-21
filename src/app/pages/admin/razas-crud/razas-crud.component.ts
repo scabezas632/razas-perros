@@ -7,6 +7,7 @@ import 'rxjs/operators';
 import { NgForm } from '@angular/forms';
 import { FileItem } from '../../../models/file-item';
 import { UrlImage } from '../../../models/url-image';
+import { PaisesService } from '../../../services/paises.service';
 
 
 @Component({
@@ -19,8 +20,8 @@ export class RazasCRUDComponent implements OnInit {
   raza: Raza = {
     nombre: '',
     info: '',
-    pais: '',
-    tamanio: '',
+    pais: 'undefined',
+    tamanio: 'undefined',
     img: ''
   };
 
@@ -34,16 +35,30 @@ export class RazasCRUDComponent implements OnInit {
   inputFile: any;
 
   url: UrlImage[] = [];
+  paises: any[] = [];
 
   constructor( private _razasService: RazasService,
+               private _paisesService: PaisesService,
                private router: Router,
                private route: ActivatedRoute ) {
     this.route.params.subscribe( parametros => {
       this.id = parametros['id'];
+
+      this._paisesService.getPaises()
+            .subscribe( data => {
+              this.paises = data;
+       });
+
       if (this.id !== 'nuevo') {
         this._razasService.obtenerRaza( this.id )
             .subscribe( (data: Raza) => {
               this.raza = data;
+              if ( data.img !== '' ) {
+                const urlTemporal: UrlImage = new UrlImage();
+                urlTemporal.url = data.img;
+                this.url[0] = urlTemporal;
+                this.mostrarDropZone = false;
+              }
             });
       }
     });
@@ -65,8 +80,11 @@ export class RazasCRUDComponent implements OnInit {
     this.router.navigate(['/admin', 'nuevo']);
     razaForma.reset({
       pais: 'undefined',
-      tamanio: 'undefined'
+      tamanio: 'undefined',
     });
+    if ( this.url[0] ) {
+      this.url[0].url = '';
+    }
 
   }
 

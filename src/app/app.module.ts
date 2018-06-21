@@ -20,6 +20,7 @@ import { environment } from '../environments/environment';
 
 // Servicios
 import { RazasService } from './services/razas.service';
+import { PaisesService } from './services/paises.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { RazasService } from './services/razas.service';
     AngularFireStorageModule
   ],
   providers: [
-    RazasService
+    RazasService,
+    PaisesService
   ],
   bootstrap: [AppComponent]
 })
