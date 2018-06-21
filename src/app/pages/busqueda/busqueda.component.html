@@ -1,36 +1,33 @@
 <div class="row">
-  <div class="col-md-12">
-    
-    <h1>Razas de Perros</h1>
-    <input [(ngModel)]="query" type="text" class="form-control" placeholder="Filtrar por término">
+    <div class="col-md-12">
 
-  </div>
+        <h1>Razas de Perros</h1>
+        <input [(ngModel)]="query" type="text" class="form-control" placeholder="Filtrar por término">
+
+    </div>
 </div>
 
-<div class="card-columns main-container">
-  <div class="card animated fadeIn fast" *ngFor="let raza of razas | search: query; let i = index">
-    <img class="card-img-top rounded mx-auto d-block" [src]="raza.img" [alt]="raza.nombre">
-    <div class="card-body">
-        <h5 class="card-title">{{ raza.nombre }}</h5>
-        <p class="card-text">{{ raza.info }}</p>
+<div class="container">
+    <div class="main-container">
+        <div class="card-container animated fadeIn fast" *ngFor="let raza of razas | search: query; let i = index">
+            <img class="mx-auto d-block" [src]="raza.img" [alt]="raza.nombre">
+            <div class="contenido">
+                <h5>{{ raza.nombre }}</h5>
+                <p>{{ (raza.info.length>70)? (raza.info | slice:0:70)+'...':(raza.info)}}</p>
 
-        <a [routerLink]="['/busqueda',raza.id]" 
-            class="btn btn-outline-danger btn-block">
+                <a [routerLink]="['/busqueda',raza.id]" class="btn btn-outline-danger btn-block">
           Ver Info
         </a>
-        
-      </div>
+            </div>
+        </div>
     </div>
-
 </div>
 
 
-<div *ngIf="(razas | search: query)?.length===0 && !loading"
-      class="alert alert-info" role="alert">
-  <strong>Lo sentimos</strong>, no se han encontrado razas con el termino ingresado.
+<div *ngIf="(razas | search: query)?.length===0 && !loading" class="alert alert-info" role="alert">
+    <strong>Lo sentimos</strong>, no se han encontrado razas con el termino ingresado.
 </div>
 
-<div *ngIf="loading"
-      class="alert alert-warning" role="alert">
-  <strong>Cargando...</strong> por favor espere.
+<div *ngIf="loading" class="alert alert-warning" role="alert">
+    <strong>Cargando...</strong> por favor espere.
 </div>

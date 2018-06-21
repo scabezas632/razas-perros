@@ -12,6 +12,8 @@ export class BusquedaComponent implements OnInit {
   razas: any[] = [];
   loading = true;
 
+  query = '';
+
   constructor( private _razasService: RazasService,
                private router: Router ) {
 
