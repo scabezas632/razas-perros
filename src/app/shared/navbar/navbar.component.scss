@@ -1,0 +1,68 @@
+@import "../../../assets/scss/_mixins";
+@import "../../../assets/scss/_theme";
+// body {
+//     box-sizing: border-box;
+// }
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 1rem 0;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center
+}
+
+.rrss {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0 1.4em 0 0;
+    font-size: 0.9em;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #7D7C7D;
+}
+
+nav>.active>a:focus {
+    color: #000000 !important;
+    border-bottom: 2px solid #000000 !important;
+    font-weight: 300 !important;
+}
+
+li a:hover {
+    color: #000000 !important;
+}
+
+@include tablet {
+    .contenedor {
+        flex-direction: row;
+        justify-content: space-between;
+        flex: 1;
+    }
+}
+
+@include desktop {}

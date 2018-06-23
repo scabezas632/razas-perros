@@ -1,0 +1,67 @@
+@import "../../../assets/scss/_mixins";
+@import "../../../assets/scss/_theme";
+.contenedor-global {
+    margin: 0 auto;
+}
+
+.contenedor-resultados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.contenedor-card {
+    flex: 0 1 100%;
+    margin-bottom: 1rem;
+    border: 1px solid #aaaaaa;
+    text-align: justify;
+    img {
+        display: block;
+        width: 20rem;
+        height: 10rem;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    .contenido-card {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        h5 {
+            text-align: center;
+        }
+    }
+}
+
+.form-css {
+    @include input-select;
+}
+
+.button {
+    @include button($primary);
+}
+
+@include phone-landscape {
+    .contenedor-resultados {
+        display: flex;
+        // c
+        justify-content: space-between;
+    }
+}
+
+@include tablet {
+    .contenedor-resultados {
+        display: flex;
+        justify-content: space-between;
+    }
+    .contenedor-card {
+        flex: 0 1 calc(33% - 1rem);
+    }
+}
+
+@include desktop {
+    .contenedor-card {
+        flex: 0 1 calc(25% - 1rem);
+    }
+}
