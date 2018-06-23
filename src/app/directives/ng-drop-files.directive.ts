@@ -55,9 +55,9 @@ export class NgDropFilesDirective {
 
   @HostListener('mouseout')
   public onMouseOut() {
-    if ( this.url[0] ) {
+    // if ( this.url[0] ) {
       this.mostrarDropZone.emit( false );
-    }
+    // }
   }
 
   private _getTransferencia( event: any ) {

@@ -5,7 +5,7 @@ import { Raza } from '../../../interfaces/raza.interface';
 @Component({
   selector: 'app-razas',
   templateUrl: './razas.component.html',
-  styleUrls: ['./razas.component.css']
+  styleUrls: ['./razas.component.scss']
 })
 export class RazasComponent implements OnInit {
 

@@ -15,7 +15,7 @@
 
         <div class="row">
 
-            <div class="col-md-6 text-center width-100">
+            <div class="col-md-6 text-center contenedor">
                 <div appNgDropFiles [archivo]="archivo" (mostrarDropZone)="mostrarDropZone = $event" (urlDrop)="url = $event" (mouseSobre)="cursorSobreElemento = $event" [ngClass]="{ 'file-over': cursorSobreElemento }" class="well drop-zone">
                     <div class="drop-or-select" [ngClass]="{ 'mostrar': mostrarDropZone, 'no-mostrar': url[0]?.url!=='' && !mostrarDropZone }">
                         <h4>Arrastre o...</h4>
@@ -58,7 +58,7 @@
 
                     <div class="form-group width-100">
                         <label>País: </label>
-                        <select [ngModel]="raza.pais" name="pais" class="form-control" required>
+                        <select [ngModel]="raza.pais" name="pais" class="form-control selectpicker" required data-live-search="true">
                             <option value="undefined" disabled  selected> Seleccione un país de origen </option>
                             <option *ngFor="let p of paises" [ngValue]="p.nombre">{{p.nombre}}</option>
                         </select>
@@ -70,9 +70,9 @@
 
                     <div class="form-group width-100">
                         <label>Tamaño: </label>
-                        <select [ngModel]="raza.tamanio" name="tamanio" class="form-control" required>
+                        <select [ngModel]="raza.tamanio" name="tamanio" class="form-control selectpicker" required>
                             <option value="undefined" disabled  selected> Seleccione el tamaño de la raza </option>
-                            <option value="Chico">Chico</option>
+                            <option value="Pequeño">Pequeño</option>
                             <option value="Mediano">Mediano</option>
                             <option value="Grande">Grande</option>
                         </select>

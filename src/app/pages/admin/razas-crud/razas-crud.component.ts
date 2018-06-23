@@ -13,7 +13,7 @@ import { PaisesService } from '../../../services/paises.service';
 @Component({
   selector: 'app-razas-crud',
   templateUrl: './razas-crud.component.html',
-  styleUrls: ['./razas-crud.component.css']
+  styleUrls: ['./razas-crud.component.scss']
 })
 export class RazasCRUDComponent implements OnInit {
 

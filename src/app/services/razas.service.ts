@@ -107,53 +107,68 @@ export class RazasService {
 
   cargarAFirebase( imagen: FileItem[], raza: Raza, id: string, urlPrevia: string ) {
 
-    if ( !imagen[0] ) {
+    if ( !imagen[0] && urlPrevia === '' ) {
       console.log('Debe seleccionar una imagen.');
       return;
     }
 
-    // Primero se carga la imagen
-    const storageRef = firebase.storage().ref();
+    if ( imagen[0] ) {
 
-    imagen[0].estaSubiendo = true;
-    if (imagen[0].estaSubiendo || imagen[0].progreso >= 100) {
-      // return;
+      // Primero se carga la imagen
+      const storageRef = firebase.storage().ref();
+
+      imagen[0].estaSubiendo = true;
+      if (imagen[0].estaSubiendo || imagen[0].progreso >= 100) {
+        // return;
+      }
+
+      const nombreArchivo = imagen[0].nombreArchivo.split('.')[0];
+      const extensionArchivo = imagen[0].nombreArchivo.split('.')[1];
+
+      const referenciaImagen = storageRef.child( `${ this.CARPETA_IMAGENES }/${ nombreArchivo }-${ id }.${ extensionArchivo }` );
+      const uploadTask: firebase.storage.UploadTask =
+              storageRef.child(`${ this.CARPETA_IMAGENES }/${ nombreArchivo }-${ id }.${ extensionArchivo }`)
+                        .put(imagen[0].archivo);
+
+      uploadTask.on( firebase.storage.TaskEvent.STATE_CHANGED,
+                ( snapshot: firebase.storage.UploadTaskSnapshot ) =>
+                            imagen[0].progreso = ( snapshot.bytesTransferred / snapshot.totalBytes ) * 100 ,
+                ( error ) => console.error('Error al subir: ', error),
+              () => {
+                referenciaImagen.getDownloadURL().then(
+                  ( urlImagen ) => {
+                      console.log('Imagen cargada correctamente');
+                      if (urlPrevia !== '') {
+                        this.borrarImagenAnterior( urlPrevia );
+                      }
+                      // Una vez que la imagen está subida, se le asigna los atributos a la clase
+                      imagen[0].url = urlImagen;
+                      imagen[0].estaSubiendo = false;
+
+                      const claseRaza: RazaClass = new RazaClass();
+                      claseRaza.nombre = raza.nombre;
+                      claseRaza.info = raza.info;
+                      claseRaza.pais = raza.pais;
+                      claseRaza.tamanio = raza.tamanio;
+                      claseRaza.img = urlImagen;
+                      // Finalmente se sube el documento completo a firebase
+                      this.guardarDatos( id, claseRaza );
+                  }, ( error ) => console.log('No existe la URL')
+                  );
+              });
+
+    } else {
+      const claseRaza: RazaClass = new RazaClass();
+      claseRaza.nombre = raza.nombre;
+      claseRaza.info = raza.info;
+      claseRaza.pais = raza.pais;
+      claseRaza.tamanio = raza.tamanio;
+      claseRaza.img = urlPrevia;
+      console.log(claseRaza);
+      // Finalmente se sube el documento completo a firebase
+      this.guardarDatos( id, claseRaza );
     }
 
-    const nombreArchivo = imagen[0].nombreArchivo.split('.')[0];
-    const extensionArchivo = imagen[0].nombreArchivo.split('.')[1];
-
-    const referenciaImagen = storageRef.child( `${ this.CARPETA_IMAGENES }/${ nombreArchivo }-${ id }.${ extensionArchivo }` );
-    const uploadTask: firebase.storage.UploadTask =
-            storageRef.child(`${ this.CARPETA_IMAGENES }/${ nombreArchivo }-${ id }.${ extensionArchivo }`)
-                      .put(imagen[0].archivo);
-
-    uploadTask.on( firebase.storage.TaskEvent.STATE_CHANGED,
-              ( snapshot: firebase.storage.UploadTaskSnapshot ) =>
-                          imagen[0].progreso = ( snapshot.bytesTransferred / snapshot.totalBytes ) * 100 ,
-              ( error ) => console.error('Error al subir: ', error),
-            () => {
-              referenciaImagen.getDownloadURL().then(
-                ( urlImagen ) => {
-                    console.log('Imagen cargada correctamente');
-                    if (urlPrevia !== '') {
-                      this.borrarImagenAnterior( urlPrevia );
-                    }
-                    // Una vez que la imagen está subida, se le asigna los atributos a la clase
-                    imagen[0].url = urlImagen;
-                    imagen[0].estaSubiendo = false;
-
-                    const claseRaza: RazaClass = new RazaClass();
-                    claseRaza.nombre = raza.nombre;
-                    claseRaza.info = raza.info;
-                    claseRaza.pais = raza.pais;
-                    claseRaza.tamanio = raza.tamanio;
-                    claseRaza.img = urlImagen;
-                    // Finalmente se sube el documento completo a firebase
-                    this.guardarDatos( id, claseRaza );
-                }, ( error ) => console.log('No existe la URL')
-                );
-            });
 
 
   }

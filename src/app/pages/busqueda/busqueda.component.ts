@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-razas',
   templateUrl: './busqueda.component.html',
-  styleUrls: ['./busqueda.component.css']
+  styleUrls: ['./busqueda.component.scss']
 })
 export class BusquedaComponent implements OnInit {
 
