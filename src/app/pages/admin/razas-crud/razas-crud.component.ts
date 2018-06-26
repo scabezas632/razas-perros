@@ -79,6 +79,11 @@ export class RazasCRUDComponent implements OnInit {
   agregarNuevo( razaForma: NgForm ) {
 
     this.router.navigate(['/admin', 'nuevo']);
+    this.raza.nombre = '';
+    this.raza.info = '';
+    this.raza.pais = 'undefined';
+    this.raza.tamanio = 'undefined';
+    this.raza.img = '';
     razaForma.reset({
       pais: 'undefined',
       tamanio: 'undefined',

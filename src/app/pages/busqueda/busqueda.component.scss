@@ -2,36 +2,39 @@
 @import "../../../assets/scss/_theme";
 .contenedor-global {
     margin: 0 auto;
+    padding-top: 1.3rem;
 }
 
 .contenedor-resultados {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 1rem;
+    padding-top: .7rem;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    align-content: center;
+    justify-content: center;
 }
 
 .contenedor-card {
-    flex: 0 1 100%;
-    margin-bottom: 1rem;
-    border: 1px solid #aaaaaa;
+    background-color: white;
+    border: 1px solid #c7c7c7;
+}
+
+img {
+    margin: 0 auto;
+    width: 100%;
+    max-height: 160px;
+    background-size: fixed;
+}
+
+.contenido-card {
     text-align: justify;
-    img {
-        display: block;
-        width: 20rem;
-        height: 10rem;
-        max-height: 100%;
-        max-width: 100%;
-        object-fit: cover;
+    padding: 1rem;
+    h5 {
+        text-align: center;
+        // color: $primary
     }
-    .contenido-card {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-        h5 {
-            text-align: center;
-        }
-    }
+    p {}
 }
 
 .form-css {
@@ -42,26 +45,70 @@
     @include button($primary);
 }
 
-@include phone-landscape {
-    .contenedor-resultados {
-        display: flex;
-        // c
-        justify-content: space-between;
-    }
-}
-
 @include tablet {
     .contenedor-resultados {
-        display: flex;
-        justify-content: space-between;
-    }
-    .contenedor-card {
-        flex: 0 1 calc(33% - 1rem);
+        grid-template-columns: repeat(3, calc(33% - 1rem));
     }
 }
 
 @include desktop {
-    .contenedor-card {
-        flex: 0 1 calc(25% - 1rem);
+    .contenedor-resultados {
+        grid-template-columns: repeat(4, calc(25% - 1rem));
     }
 }
+
+// .contenedor-resultados {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     margin-top: 1rem;
+// }
+// .contenedor-card {
+//     flex: 0 1 100%;
+//     margin-bottom: 1rem;
+//     border: 1px solid #aaaaaa;
+//     text-align: justify;
+//     img {
+//         display: block;
+//         width: 20rem;
+//         height: 10rem;
+//         max-height: 100%;
+//         max-width: 100%;
+//         object-fit: cover;
+//     }
+//     .contenido-card {
+//         display: flex;
+//         flex-direction: column;
+//         padding: 1rem;
+//         h5 {
+//             text-align: center;
+//         }
+//     }
+// }
+// .form-css {
+//     @include input-select;
+// }
+// .button {
+//     @include button($primary);
+// }
+// @include phone-landscape {
+//     .contenedor-resultados {
+//         display: flex;
+//         // c
+//         justify-content: space-between;
+//     }
+// }
+// @include tablet {
+//     .contenedor-resultados {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+//     .contenedor-card {
+//         flex: 0 1 calc(33% - 1rem);
+//     }
+// }
+// @include desktop {
+//     .contenedor-card {
+//         flex: 0 1 calc(25% - 1rem);
+//     }
+// }

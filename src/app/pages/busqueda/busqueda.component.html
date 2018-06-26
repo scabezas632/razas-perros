@@ -1,18 +1,14 @@
 <div class="contenedor-global">
-    <div class="row">
-        <div class="col-md-12">
-
-            <h1>Razas de Perros</h1>
-            <input [(ngModel)]="query" type="text" class="form-css" placeholder="Filtrar por término">
-
-        </div>
+    <div>
+        <h1>Razas de Perros</h1>
+        <input [(ngModel)]="query" type="text" class="form-css" placeholder="Filtrar por termino">
     </div>
 
     <div class="contenedor-resultados">
         <div class="contenedor-card animated fadeIn fast" *ngFor="let raza of razas | search: query; let i = index">
-            <img class="mx-auto d-block" [src]="raza.img" [alt]="raza.nombre">
+            <img [src]="raza.img" [alt]="raza.nombre">
             <div class="contenido-card">
-                <h5>{{ raza.nombre }}</h5>
+                <h5 class="titulo-card">{{ raza.nombre }}</h5>
                 <p>{{ (raza.info.length>70)? (raza.info | slice:0:70)+'...':(raza.info)}}</p>
 
                 <a [routerLink]="['/busqueda',raza.id]" class="button">

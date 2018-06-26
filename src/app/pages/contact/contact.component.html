@@ -1,3 +1,44 @@
-<p>
-  contact works!
-</p>
+<div class="contenedor-global">
+
+    <div class="titulo">
+        <h1>¡Contactanos!</h1>
+        <h4>Estaremos felices de solucionar tu problema.</h4>
+    </div>
+    <div class="form">
+        <div class="inputs">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Nombre" class="form-css">
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" placeholder="E-mail" class="form-css">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" class="form-css"></textarea>
+        </div>
+        <div class="btn-submit">
+            <button type="submit" class="button">
+                Enviar
+            </button>
+        </div>
+    </div>
+
+    <div class="contacto">
+        <h5>Email</h5>
+        <p>info@perrits.com</p>
+        <hr>
+        <h5>Teléfono</h5>
+        <p>(2) 2548 9875</p>
+        <hr>
+        <h5>Dirección</h5>
+        <p>Calle #3522, Santiago. Oficina 23</p>
+        <hr>
+        <h5>Redes Sociales</h5>
+        <p>Logos</p>
+    </div>
+
+    <div class="contenedor-map">
+        <h3>¡Encuentranos en el mapa!</h3>
+        <agm-map [zoom]="15" [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+    </div>
+
+</div>

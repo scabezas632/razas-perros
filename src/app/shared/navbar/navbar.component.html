@@ -1,28 +1,20 @@
-<header class="contenedor">
-    <div class="logo">
-        <a [routerLink]="['home']">
-            <img src='./assets/img/logo.png' width='180'>
-        </a>
+<header class="contenedor-global">
+    <div class="contenedor">
+        <div class="logo">
+            <a [routerLink]="['home']">
+                <img src='./assets/img/logo.png' width='180'>
+            </a>
+        </div>
+        <nav class="navegacion">
+            <a [routerLink]="['busqueda']">Razas</a>
+            <a [routerLink]="['about']">Sobre</a>
+            <a [routerLink]="['contact']">Contacto</a>
+        </nav>
+        <nav class="rrss">
+            <a href="#"><span class="fa fa-facebook"></span></a>
+            <a href="#"><span class="fa fa-twitter"></span></a>
+            <a href="#"><span class="fa fa-instagram"></span></a>
+            <a href="#"><span class="fa fa-linkedin"></span></a>
+        </nav>
     </div>
-    <nav class="navegacion">
-        <ul>
-            <li>
-                <a [routerLink]="['busqueda']">Razas</a>
-            </li>
-            <li>
-                <a [routerLink]="['about']">Sobre</a>
-            </li>
-            <li>
-                <a [routerLink]="['contact']">Contacto</a>
-            </li>
-        </ul>
-    </nav>
-    <nav class="rrss">
-        <ul>
-            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-            <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-            <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-        </ul>
-    </nav>
 </header>

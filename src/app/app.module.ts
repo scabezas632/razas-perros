@@ -22,6 +22,9 @@ import { environment } from '../environments/environment';
 import { RazasService } from './services/razas.service';
 import { PaisesService } from './services/paises.service';
 
+// Maps
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +40,10 @@ import { PaisesService } from './services/paises.service';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBVh8bTLiTjGMs12U3j-cIwK58JxCQ29tk'
+    })
   ],
   providers: [
     RazasService,

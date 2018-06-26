@@ -1,68 +1,131 @@
 @import "../../../assets/scss/_mixins";
 @import "../../../assets/scss/_theme";
-// body {
-//     box-sizing: border-box;
-// }
 .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #F2F2F2;
-    padding: 1rem 0;
-    height: 100%;
-    width: 80%;
+    max-width: 1100px;
     margin: 0 auto;
-}
-
-.navegacion {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center
-}
-
-.logo {
-    display: flex;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: .5rem;
     justify-content: center;
-    align-items: center;
-    align-content: center
 }
 
-.rrss {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center
+.contenedor-global {
+    background-color: $primary;
 }
 
-header ul li {
-    display: inline-block;
-    padding: 0 1.4em 0 0;
-    font-size: 0.9em;
+.contenedor .logo {
+    display: grid;
+    align-content: center;
+    img {
+        max-width: 100%;
+    }
 }
 
-header ul li a {
+.contenedor .navegacion {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.contenedor .rrss {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    margin-bottom: .5rem;
+}
+
+.contenedor a {
+    text-align: center;
+    color: white;
     text-decoration: none;
-    color: #7D7C7D;
-}
-
-nav>.active>a:focus {
-    color: #000000 !important;
-    border-bottom: 2px solid #000000 !important;
-    font-weight: 300 !important;
-}
-
-li a:hover {
-    color: #000000 !important;
+    font-size: 1.2rem;
 }
 
 @include tablet {
     .contenedor {
-        flex-direction: row;
-        justify-content: space-between;
-        flex: 1;
+        grid-template-rows: unset;
+        grid-template-columns: 30% 1fr 10%;
+        padding: .5rem 0 .5rem 0;
+    }
+    .contenedor .logo {
+        display: grid;
+        align-content: center;
+    }
+    .contenedor .navegacion {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+    .contenedor .rrss {
+        // grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+        display: grid;
+        align-content: center;
+        justify-content: center;
     }
 }
 
-@include desktop {}
+@include desktop {
+    .contenedor {
+        grid-template-columns: 20% 1fr 15%;
+        justify-content: center;
+    }
+}
+
+// .contenedor {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: space-between;
+//     border-bottom: 1px solid #F2F2F2;
+//     padding: 1rem 0;
+//     height: 100%;
+//     width: 100%;
+//     margin: 0 auto;
+//     background-color: $primary;
+// }
+// .navegacion {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     align-content: center
+// }
+// .logo {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     align-content: center
+// }
+// .rrss {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     align-content: center
+// }
+// header ul li {
+//     display: inline-block;
+//     padding: 0 1.4em 0 0;
+//     font-size: 0.9em;
+// }
+// header ul li a {
+//     text-decoration: none;
+//     color: white;
+// }
+// nav>.active>a:focus {
+//     color: #000000 !important;
+//     border-bottom: 2px solid #000000 !important;
+//     font-weight: 300 !important;
+// }
+// li a:hover {
+//     color: #000000 !important;
+// }
+// @include tablet {
+//     .contenedor {
+//         flex-direction: row;
+//         justify-content: space-between;
+//         flex: 1;
+//         width: 100%;
+//     }
+// }
+// @include desktop {}

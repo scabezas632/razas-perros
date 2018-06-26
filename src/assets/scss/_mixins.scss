@@ -13,6 +13,7 @@
 // Botones
 @mixin button( $color) {
     background-color: $color;
+    border: none;
     padding: 0.5rem 1rem;
     margin-top: 1rem;
     display: block;
@@ -34,8 +35,12 @@
     color: $color;
     text-decoration: none;
     &:hover {
+        transition-duration: 0.4s;
         background-color: $color;
         color: white;
+    }
+    .block {
+        width: 100%;
     }
 }
 

@@ -1,0 +1,81 @@
+@import "../../../assets/scss/_mixins";
+@import "../../../assets/scss/_theme";
+.contenedor-global {
+    grid-template-areas: "titulo" "form" "contacto" "map";
+    grid-gap: .8rem;
+    margin: 0 auto;
+    display: grid;
+}
+
+.titulo {
+    grid-area: titulo;
+}
+
+.form {
+    grid-area: form;
+}
+
+.contacto {
+    grid-area: contacto;
+    h5 {
+        color: $primary;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    h3 {
+        border-top: 1px dotted #8c8b8b;
+        border-bottom: 1px dotted #fff;
+    }
+}
+
+.contenedor-map {
+    grid-area: map;
+}
+
+.form-css {
+    @include input-select;
+}
+
+.button {
+    @include button($primary);
+    display: block;
+    width: 100%;
+}
+
+agm-map {
+    height: 300px;
+    max-height: 100%;
+}
+
+@include tablet {
+    .contenedor-global {
+        grid-template-areas: "titulo titulo" "form contacto" "map map";
+        grid-template-columns: 60% 40%;
+        grid-gap: .5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .titulo {
+        grid-area: titulo;
+        padding: 0.5rem;
+    }
+    .form {
+        grid-area: form;
+        padding: 0.5rem;
+    }
+    .contacto {
+        grid-area: contacto;
+        padding: 0.5rem;
+        align-content: center;
+    }
+    .contenedor-map {
+        grid-area: map;
+        padding: 0.5rem;
+    }
+}
+
+@include desktop {
+    .contenedor-global {
+        grid-template-columns: 70% 30%;
+    }
+}
