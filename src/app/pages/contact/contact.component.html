@@ -5,22 +5,24 @@
         <h4>Estaremos felices de solucionar tu problema.</h4>
     </div>
     <div class="form">
-        <div class="inputs">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" placeholder="Nombre" class="form-css">
-            <label for="email">E-mail:</label>
-            <input type="text" id="email" placeholder="E-mail" class="form-css">
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" class="form-css"></textarea>
-        </div>
-        <div class="btn-submit">
-            <button type="submit" class="button">
-                Enviar
-            </button>
-        </div>
+        <form ngNativeValidate>
+            <div class=" inputs ">
+                <label for="nombre ">Nombre: <a>*</a></label>
+                <input type="text " id="nombre " placeholder="Nombre " class="form-css" name="nombre" required>
+                <label for="email ">E-mail: <a>*</a></label>
+                <input type="text " id="email " placeholder="E-mail " class="form-css" name="email" required>
+                <label for="mensaje ">Mensaje: <a>*</a></label>
+                <textarea id="mensaje " class="form-css" name="mensaje" required></textarea>
+            </div>
+            <div class="btn-submit ">
+                <button type="submit " class="button">
+                    Enviar
+                </button>
+            </div>
+        </form>
     </div>
 
-    <div class="contacto">
+    <div class="contacto ">
         <h5>Email</h5>
         <p>info@perrits.com</p>
         <hr>
@@ -34,10 +36,11 @@
         <p>Logos</p>
     </div>
 
-    <div class="contenedor-map">
-        <h3>¡Encuentranos en el mapa!</h3>
-        <agm-map [zoom]="15" [latitude]="lat" [longitude]="lng">
-            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    <div class="contenedor-map ">
+        <hr>
+        <h3>¡Encuentranos!</h3>
+        <agm-map [zoom]="15 " [latitude]="lat " [longitude]="lng ">
+            <agm-marker [latitude]="lat " [longitude]="lng "></agm-marker>
         </agm-map>
     </div>
 

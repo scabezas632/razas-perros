@@ -1,10 +1,10 @@
 @import "../../../assets/scss/_mixins";
 @import "../../../assets/scss/_theme";
 .contenedor-global {
+    display: grid;
     grid-template-areas: "titulo" "form" "contacto" "map";
     grid-gap: .8rem;
     margin: 0 auto;
-    display: grid;
 }
 
 .titulo {
@@ -13,6 +13,10 @@
 
 .form {
     grid-area: form;
+    a {
+        color: red;
+        font-weight: bold;
+    }
 }
 
 .contacto {
@@ -26,10 +30,24 @@
         border-top: 1px dotted #8c8b8b;
         border-bottom: 1px dotted #fff;
     }
+    hr {
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        background: #999;
+    }
 }
 
 .contenedor-map {
     grid-area: map;
+    h3 {
+        text-align: center;
+        padding-bottom: .5rem;
+    }
+    hr {
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
 }
 
 .form-css {

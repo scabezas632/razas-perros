@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  contacto: any = {
+    nombre: '',
+    email: '',
+    mensaje: ''
+  };
+
   lat = -33.4438045;
   lng = -70.6525797;
 
@@ -14,5 +21,16 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  enviar(form: NgForm) {
+    console.log(form);
+    // const nombre = form.nombre;
+    // const email = form.email;
+    // const mensaje = form.mensaje;
+
+    // const formRequest = { name, email, mensaje};
+    form.reset();
+
+}
 
 }

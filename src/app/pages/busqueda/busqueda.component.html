@@ -1,11 +1,11 @@
 <div class="contenedor-global">
     <div>
-        <h1>Razas de Perros</h1>
+        <h1>Busca tu raza favorita</h1>
         <input [(ngModel)]="query" type="text" class="form-css" placeholder="Filtrar por termino">
     </div>
 
     <div class="contenedor-resultados">
-        <div class="contenedor-card animated fadeIn fast" *ngFor="let raza of razas | search: query; let i = index">
+        <div class="contenedor-card animated fadeIn fast" *ngFor="let raza of razas | filter: query; let i = index">
             <img [src]="raza.img" [alt]="raza.nombre">
             <div class="contenido-card">
                 <h5 class="titulo-card">{{ raza.nombre }}</h5>
@@ -20,7 +20,7 @@
 
 
 
-    <div *ngIf="(razas | search: query)?.length===0 && !loading" class="alert alert-info" role="alert">
+    <div *ngIf="(razas | filter: query)?.length===0 && !loading" class="alert alert-info" role="alert">
         <strong>Lo sentimos</strong>, no se han encontrado razas con el termino ingresado.
     </div>
 

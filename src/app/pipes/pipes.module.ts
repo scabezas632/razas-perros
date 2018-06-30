@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { KeysPipe } from './keys.pipe';
-import { SearchPipe } from './search.pipe';
+import { FilterPipe } from './filter.pipe';
 import { ImagenPipe } from './imagen.pipe';
 
 
@@ -11,12 +11,12 @@ import { ImagenPipe } from './imagen.pipe';
   ],
   exports: [
     KeysPipe,
-    SearchPipe,
+    FilterPipe,
     ImagenPipe
   ],
   declarations: [
     KeysPipe,
-    SearchPipe,
+    FilterPipe,
     ImagenPipe
   ]
 })

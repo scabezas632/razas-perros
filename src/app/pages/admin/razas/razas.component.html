@@ -1,61 +1,47 @@
- <h1>CRUD Razas de Perros</h1>
-<hr>
+<div class="contenedor-global">
+    <div class="titulo">
+        <h1>Administrar Razas de Perros</h1>
+        <hr>
+        <input [(ngModel)]="query" type="text" class="form-css" placeholder="Filtrar por termino">
+        <button [routerLink]="['/admin', 'nuevo']" class="btn btn-outline-success" type="button" name="button">
+            Nueva raza
+        </button>
+    </div>
+    <br>
 
-<div class="row">
-  <div class="col-md-12 text-right">
-    <button [routerLink]="['/admin', 'nuevo']"
-            class="btn btn-outline-success"
-            type="button" name="button">
-      Nueva raza
-    </button>
-  </div>
-</div>
-<br>
 
-<div class="row animated fadeIn fast">
-  <div class="col-md-12">
-    <div class="table-responsive">
-      <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Pais</th>
-            <th scope="col">Acciones</th>
-          </tr>
+    <table class="animated fadeIn fast">
+        <thead class="">
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Pais</th>
+                <th>Acciones</th>
+            </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let k of razas | keys; let i = index">
-            <th scope="row">{{ i+1 }}</th>
-            <td>{{ razas[k].nombre }}</td>
-            <td>{{ razas[k].pais }}</td>
-            <td>
-                <button [routerLink]="['/admin',k]"
-                        class="btn btn-outline-primary"
-                        type="button" name="button">
-                  Editar
-                </button>
+            <tr *ngFor="let k of razas | keys; let i = index">
+                <th scope="row">{{ i+1 }}</th>
+                <td>{{ razas[k].nombre }}</td>
+                <td>{{ razas[k].pais }}</td>
+                <td>
+                    <button [routerLink]="['/admin',k]" class="btn btn-outline-primary" type="button" name="button">
+                    Editar
+                  </button>
 
-                <button (click)="eliminarRaza(k)"
-                        class="btn btn-outline-danger"
-                        type="button" name="button">
-                  Eliminar
-                </button>
-            </td>
-          </tr>
+                    <button (click)="eliminarRaza(k)" class="btn btn-outline-danger" type="button" name="button">
+                    Eliminar
+                  </button>
+                </td>
+            </tr>
         </tbody>
-      </table>
+    </table>
 
-      <div *ngIf="(razas | keys ).length===0 && !loading"
-           class="alert alert-info" role="alert">
+    <div *ngIf="(razas | keys ).length===0 && !loading" class="alert alert-info" role="alert">
         <strong>No hay</strong> razas registradas.
-      </div>
-      
-      <div *ngIf="loading"
-           class="alert alert-warning" role="alert">
-        <strong>Cargando...</strong> por favor espere.
-      </div>
-
     </div>
-  </div>
+
+    <div *ngIf="loading" class="alert alert-warning" role="alert">
+        <strong>Cargando...</strong> por favor espere.
+    </div>
 </div>

@@ -8,6 +8,7 @@ import * as firebase from 'firebase';
 import { FileItem } from '../models/file-item';
 import { UrlImage } from '../models/url-image';
 import { RazaClass } from '../models/raza';
+import swal from 'sweetalert';
 
 @Injectable({
   providedIn: 'root'
@@ -164,7 +165,6 @@ export class RazasService {
       claseRaza.pais = raza.pais;
       claseRaza.tamanio = raza.tamanio;
       claseRaza.img = urlPrevia;
-      console.log(claseRaza);
       // Finalmente se sube el documento completo a firebase
       this.guardarDatos( id, claseRaza );
     }
@@ -178,12 +178,20 @@ export class RazasService {
       this.nuevaRaza( claseRaza )
       .subscribe( (data: any) => {
         this.router.navigate(['/admin', data.name]);
-      }, error => console.log(error));
+        swal('Creación finalizada', 'La raza \'' + claseRaza.nombre + '\' ha sido creada correctamente.', 'success');
+      }, error => {
+        swal('Error', 'Ha ocurrido un error al crear la raza, por favor intentelo nuevamente.', 'error');
+        console.log(error);
+      });
     } else {
       this.actualizarRaza( claseRaza, id )
       .subscribe( (data: any) => {
         // this.router.navigate(['/admin']);
-      }, error => console.log(error));
+        swal('Edición finalizada', 'La raza \'' + claseRaza.nombre + '\' ha sido editada correctamente.', 'success');
+      }, error => {
+        swal('Error', 'Ha ocurrido un error al editar la raza, por favor intentelo nuevamente.', 'error');
+        console.log(error);
+      });
     }
   }
 
